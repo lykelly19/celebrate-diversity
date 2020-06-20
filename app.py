@@ -4,6 +4,7 @@ import requests
 from twilio.twiml.messaging_response import MessagingResponse
 import datetime
 import json
+import wikipedia
 
 app = Flask(__name__)
 
@@ -15,18 +16,33 @@ months = { 1: 'January', 2: 'February', 3: 'March', 4: 'April', 5: 'May', 6: 'Ju
 
 @app.route('/', methods=['POST'])
 def receive_sms():
-    body = request.values.get('Body', None)
-
+    text = request.values.get('Body', None)
+    text = text.strip()  # remove leading/trailing whitespaces
     today = datetime.datetime.now()
     month = months[today.month]  # convert from the int to word/string representation of a month
 
-    message_string = "The month is {}. Learn more by sending a number to the left of the following options: \n".format(month)
+    message_string = ''
 
-    for i in range(len(data[month]['observances'])):  # print the month's observances
-        message_string += str(i + 1) + ': ' + data[month]['observances'][i] + '\n'
+    if text.upper() == 'INFO':
+        message_string += '\nThe month is {}. Learn more by sending the number to the left of the following options: \n'.format(month)
 
-    if(len(data[month]['observances']) == 0):  # if no observances found for the month
-        message_string += 'Learn more about...'
+        for i in range(len(data[month]['observances'])):  # print the month's observances
+            message_string += str(i + 1) + ': ' + data[month]['observances'][i] + '\n'
+
+        if(len(data[month]['observances']) == 0):  # if no observances found for the month
+            message_string += 'Learn more about...'
+
+    else:
+        try:
+            numeric_selection = int(text)
+            if numeric_selection <= len(data[month]['observances']):
+                message_string += '**{}**\n'.format(data[month]['observances'][numeric_selection-1])
+                message_string += wikipedia.summary(data[month]['observances'][numeric_selection-1])
+        except ValueError:
+            pass
+
+    if(len(message_string) == 0):
+        message_string = "Learn more by texting INFO"
 
     resp = MessagingResponse()
     resp.message(message_string)
