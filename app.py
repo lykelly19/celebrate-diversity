@@ -36,7 +36,7 @@ def receive_sms():
                 if i + 2 < len(data[month]['observances']):
                     month_observances += ', '
 
-            message_string += "The month, {}, is {}!\nTo learn more and get awesome book, music, podcast, and article recommendations to celebrate, text back one of the following number(s): \n".format(month, month_observances)
+            message_string += "This month, {}, is {}!\nTo learn more and get awesome book, music, podcast, and article recommendations to celebrate, text back one of the following number(s): \n".format(month, month_observances)
 
             for i in range(len(data[month]['observances'])):  # print the month's observances
                 message_string += str(i + 1) + ': ' + data[month]['observances'][i] + '\n'
@@ -52,7 +52,7 @@ def receive_sms():
             pass
 
     if(len(message_string) == 0):
-        message_string = "Learn more by texting INFO"
+        message_string = "Learn more by texting LEARN"
 
     resp = MessagingResponse()
     resp.message(message_string)
