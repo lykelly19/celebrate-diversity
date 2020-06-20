@@ -24,20 +24,30 @@ def receive_sms():
     message_string = ''
 
     if text.upper() == 'LEARN':
-        message_string += '\nThe month is {}. Learn more by sending the number to the left of the following options: \n'.format(month)
-
-        for i in range(len(data[month]['observances'])):  # print the month's observances
-            message_string += str(i + 1) + ': ' + data[month]['observances'][i] + '\n'
 
         if(len(data[month]['observances']) == 0):  # if no observances found for the month
             message_string += 'Learn more about...'
+        else:
+            month_observances = ''
+            for i in range(len(data[month]['observances'])):
+                if i == len(data[month]['observances']) - 1 and len(data[month]['observances']) >=2:
+                    month_observances += ' and '
+                month_observances += data[month]['observances'][i]
+                if i + 2 < len(data[month]['observances']):
+                    month_observances += ', '
+
+            message_string += "The month, {}, is {}!\nTo learn more and get awesome book, music, podcast, and article recommendations to celebrate, text back one of the following number(s): \n".format(month, month_observances)
+
+            for i in range(len(data[month]['observances'])):  # print the month's observances
+                message_string += str(i + 1) + ': ' + data[month]['observances'][i] + '\n'
 
     else:
         try:
             numeric_selection = int(text)
             if numeric_selection <= len(data[month]['observances']):
                 message_string += '**{}**\n'.format(data[month]['observances'][numeric_selection-1])
-                message_string += wikipedia.summary(data[month]['observances'][numeric_selection-1])
+                message_string += wikipedia.summary(data[month]['observances'][numeric_selection-1]) + '\n'
+                message_string += '(Info retrieved from Wikipedia)'
         except ValueError:
             pass
 
