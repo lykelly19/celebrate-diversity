@@ -23,7 +23,7 @@ def receive_sms():
 
     message_string = ''
 
-    if text.upper() == 'INFO':
+    if text.upper() == 'LEARN':
         message_string += '\nThe month is {}. Learn more by sending the number to the left of the following options: \n'.format(month)
 
         for i in range(len(data[month]['observances'])):  # print the month's observances
