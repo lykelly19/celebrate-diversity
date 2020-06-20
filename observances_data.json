@@ -1,0 +1,38 @@
+{
+  "January": {
+    "observances": [ ]
+  },
+  "February": {
+    "observances": [ "Black History Month" ]
+  },
+  "March": {
+    "observances": [ "Irish-American Heritage Month", "Women's History Month"]
+  },
+  "April": {
+    "observances": [ "Arab American Heritage Month"]
+  },
+  "May": {
+    "observances": [ "Asian Pacific American Heritage Month", "Haitian Heritage Month", "Jewish American Heritage Month" ]
+  },
+  "June": {
+    "observances": [ "LGBT Pride Month", "African-American Music Appreciation Month"]
+  },
+  "July": {
+    "observances": [ ]
+  },
+  "August": {
+    "observances": [ "American Artists Appreciation Month" ]
+  },
+  "September": {
+    "observances": [ "National Hispanic Heritage Month "]
+  },
+  "October": {
+    "observances": [ "Disability Employment Awareness Month", "Italian-American Heritage and Culture Month", "Filipino American History Month", "LGBT History Month"]
+  },
+  "November": {
+    "observances": [ "Native American Indian/Alaska Native Heritage Month"]
+  },
+  "December": {
+    "observances": [ "Universal Human Rights Month"]
+  }
+}
