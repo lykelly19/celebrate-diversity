@@ -79,7 +79,7 @@ def receive_sms():
     if text.upper() == 'LEARN':
 
         if len(data[month]['observances']) == 0:  # if no observances found for the month
-            message_string += 'Learn more about...'
+            message_string += 'Celebrate diversity and learn more by checking out https://www.doinggoodtogether.org/bhf/celebrate-diversity'
         else:
             month_observances = ''
             for i in range(len(data[month]['observances'])):
