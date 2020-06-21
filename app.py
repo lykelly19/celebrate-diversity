@@ -24,20 +24,6 @@ def getSpotifyTrack(playlist_id):
 
     spotify_song_message = 'Spotify Track: '
     artist_count = 0
-
-    song = r['tracks']['items'][0]
-    message = str(len(r['tracks']['items'][0]))
-    try:
-        spotify_song_message += song['track']['name'] + ' by '
-        message += song['track']['name']
-    except:
-        pass
-
-    return message
-
-'''
-    spotify_song_message = 'Spotify Track: '
-    artist_count = 0
     random_number = random.randint(0, len(r['tracks']['items']) - 1)
     song = r['tracks']['items'][random_number]
     spotify_song_message += song['track']['name'] + ' by '
@@ -51,8 +37,8 @@ def getSpotifyTrack(playlist_id):
         artist_count += 1
 
     spotify_song_message += '\nListen Here: ' + song['track']['external_urls']['spotify'] + '\n'
-'''
-    #return spotify_song_message
+
+    return spotify_song_message
 
 @app.route('/', methods=['POST'])
 def receive_sms():
@@ -91,8 +77,8 @@ def receive_sms():
                 message_string += '(Info retrieved from Wikipedia)\n'
             if len(data[month][celebration]['spotify_song_playlist_id']) > 0:
                 message_string += getSpotifyTrack(data[month][celebration]['spotify_song_playlist_id'])
-            if len(data[month][celebration]['spotify_podcast_playlist_id']) > 0:
-                message_string += getSpotifyTrack(data[month][celebration]['spotify_podcast_playlist_id'])
+            #if len(data[month][celebration]['spotify_podcast_playlist_id']) > 0:
+            #    message_string += getSpotifyTrack(data[month][celebration]['spotify_podcast_playlist_id'])
         except ValueError:
             pass
 
