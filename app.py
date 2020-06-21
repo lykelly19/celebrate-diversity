@@ -52,6 +52,21 @@ def getSpotifyTrack(playlist_id):
 
     return spotify_song_message
 
+def getBook(author):
+    '''
+    url = "https://www.googleapis.com/books/v1/volumes?q=inauthor:" + author.lower().replace(' ', '-')
+    response = requests.get(url)
+    json_data = json.loads(response.text)
+    if len(json_data['item']) > 0:
+        if len(json_data['items']) > 3:  # look at most the top 3 results (higher relevance)
+            max = 3
+        else:
+            max = len(json_data['items'])
+        random_number = random.randint(0, max - 1)
+        return json_data['items'][random_number]['volumeInfo']['title']  # return book title
+    '''
+    return 'book'
+
 @app.route('/', methods=['POST'])
 def receive_sms():
     text = request.values.get('Body', None)
@@ -85,13 +100,18 @@ def receive_sms():
             celebration = data[month]['observances'][numeric_selection-1]
             if numeric_selection <= len(data[month]['observances']):
                 message_string += '\n**{}**\n\n'.format(celebration)
-                message_string += wikipedia.summary(celebration)[0:450] + '...\n'
+                message_string += wikipedia.summary(celebration)[0:300] + '...\n'
                 message_string += '(Info retrieved from Wikipedia)\n\n'
             if len(data[month][celebration]['spotify_song_playlist_id']) > 0:
                 message_string += getSpotifyTrack(data[month][celebration]['spotify_song_playlist_id'])
             if len(data[month][celebration]['spotify_podcast']['name']) > 0:
-                message_string +=  '\nSpotify Podcast: ' + data[month][celebration]['spotify_podcast']['name'] + '\n'
+                message_string += '\nSpotify Podcast: ' + data[month][celebration]['spotify_podcast']['name'] + '\n'
                 message_string += data[month][celebration]['spotify_podcast']['link'] + '\n\n'
+            if len(data[month][celebration]['authors']) > 0:
+                random_number = random.randint(0, len(data[month][celebration]['authors']) - 1)
+                author = data[month][celebration]['authors'][random_number]
+                title = getBook(author)
+                message_string += '\nBook: {} by {}\n'.format(title, author)
         except ValueError:
             pass
 

@@ -10,7 +10,8 @@
           "link": "https://open.spotify.com/playlist/3nMf3Dvo1q6CubgkpUCVjl?si=lj8YYCWCT4O-pXQXcsDjTQ",
           "name": "Black History Month Podcast Playlist from NPR"
         }
-    }
+    },
+    "authors": []
   },
   "March": {
     "observances": [ "Irish-American Heritage Month", "Women's History Month"],
@@ -19,14 +20,16 @@
       "spotify_podcast": {
           "link": "https://open.spotify.com/episode/7yZ6JHbLu95KHmT73TdrdM?si=VO9diyr6QmiyQy3C7G4XHw",
           "name": "Beyond the Beer: Rediscovering Irish-American Culture and Heritage"
-        }
+        },
+        "authors": []
     },
     "Women's History Month": {
       "spotify_song_playlist_id": "5dy9Obb0hKoD7VIDh3US4Z?si",
       "spotify_podcast": {
           "link": "https://open.spotify.com/show/5bwh8e6OdHFs3GSbGTzb7z?si=qX6a2vkgSuC-Zfbg4dFDLw",
           "name": "The Women’s Print History Project Monthly Mercury"
-        }
+        },
+        "authors": []
     }
   },
   "April": {
@@ -36,7 +39,8 @@
       "spotify_podcast": {
           "link": "",
           "name": ","
-        }
+        },
+        "authors": []
     }
   },
   "May": {
@@ -46,21 +50,24 @@
       "spotify_podcast": {
           "link": "https://open.spotify.com/show/7FOAOvL4rqJPMQx1m8v0YG?si=RbLjvVYJRLabaMSfEUn50g",
           "name": "For Micronesians by Micronesians"
-        }
+        },
+        "authors": []
     },
     "Haitian Heritage Month": {
       "spotify_song_playlist_id": "2jS6eFsEvr8zrDAr6GXz5o?si",
       "spotify_podcast": {
           "link": "Growing Up Krenglish",
           "name": "https://open.spotify.com/show/1vbtaJybAGxVjdVdWTBDa4?si=cmeetMAlSGSMxPVddtRn8g"
-        }
+        },
+        "authors": []
     },
     "Jewish American Heritage Month": {
       "spotify_song_playlist_id": "12XZJpvtFpJXykR2CzJv3I?si",
       "spotify_podcast": {
           "link": "https://open.spotify.com/episode/7zzQET4SUki3Fxzd8OLuev?si=DmigwzpcRISJpPcbd_RqZg",
           "name": "The Book of Life Plays Ball"
-        }
+        },
+        "authors": []
     }
   },
   "June": {
@@ -70,14 +77,16 @@
       "spotify_podcast": {
           "link": "https://open.spotify.com/playlist/37i9dQZF1DXd8QW6DBkPG8?si=hm6h4E_uTY68sv5vIGXF3g",
           "name": "LGBT+ Voices"
-        }
+        },
+        "authors": ["Matthew Riemer", "Meredith Talusan", "Jacob Tobia"]
     },
     "African-American Music Appreciation Month": {
       "spotify_song_playlist_id": "0TXHc8cP96QgHo2XEoxbrZ?si",
       "spotify_podcast": {
           "link": "https://open.spotify.com/playlist/1kSB2wcWIoWCQ0nNbaKXjv?si=ArUoL-n6SxGl4yDGrQjM_w",
           "name": "African American Music Appreciation Month Podcasts"
-        }
+        },
+        "authors": ["Charles Mingus", "Gayle Wald", "Ashley Kahn"]
     }
   },
   "July": {
@@ -90,7 +99,8 @@
       "spotify_podcast": {
           "link": "https://open.spotify.com/show/7c3jphWdRfLeWqqeXl0hF3?si=2eo8_6U4SliEw-QXokmxGg",
           "name": "American Masters Podcast"
-        }
+        },
+        "authors": []
     }
   },
   "September": {
@@ -100,7 +110,8 @@
       "spotify_podcast": {
           "link": "https://open.spotify.com/episode/2AT50emcEenE9NKx3s8sy8?si=PGh47e5XQ467ENhWYm1nPA",
           "name": "Hispanic Heritage Week"
-        }
+        },
+        "authors": []
     }
   },
   "October": {
@@ -110,28 +121,32 @@
       "spotify_podcast": {
           "link": "https://open.spotify.com/show/4h2dlAmdC8VieSvpjhyUTq?si=Nl5YIr-eTPKllmNTMQwYaw",
           "name": "Disability Visibility"
-        }
+        },
+        "authors": []
     },
     "Italian-American Heritage and Culture Month": {
       "spotify_song_playlist_id": "1QM8YYCUzZfqRdys62JdXh?si",
       "spotify_podcast": {
           "link": "https://open.spotify.com/show/23DypkCV0ev62zEJ6Lv1d1?si=oVhPHj3QRXmC1XnUnRpnPA",
           "name": "The Italian American Podcast"
-        }
+        },
+        "authors": []
     },
     "Filipino American History Month": {
       "spotify_song_playlist_id": "16yMYsSvrAZ39ByLQy4OM0?si",
       "spotify_podcast": {
           "link": "https://open.spotify.com/show/7jTAf1Cv2OpqdGoBhIhaq2?si=GOeemlSGQkCxaBZvi_x1bw",
           "name": "This Filipino American Life"
-        }
+        },
+        "authors": []
     },
     "LGBT History Month": {
       "spotify_song_playlist_id": "37i9dQZF1DX59HcpGmPXYR?si",
       "spotify_podcast": {
           "link": "https://open.spotify.com/playlist/37i9dQZF1DXd8QW6DBkPG8?si=hm6h4E_uTY68sv5vIGXF3g",
           "name": "LGBT+ Voices"
-        }
+        },
+        "authors": []
     }
   },
   "November": {
@@ -141,7 +156,8 @@
       "spotify_podcast": {
           "link": "https://open.spotify.com/show/3Qdmo73PwMUCktIW5URwXc?si=TnLFSHXKQ427WV5Uu1f2qg",
           "name": "National Native Network Podcast"
-        }
+        },
+        "authors": []
     }
   },
   "December": {
@@ -151,7 +167,8 @@
       "spotify_podcast": {
           "link": "https://open.spotify.com/show/7d2GzeU9zQPj4NhNiLy9tp?si=txPNpd0SRPOR3lbv8bdZuw",
           "name": "On Human Rights"
-        }
+        },
+        "authors": []
     }
   }
 }
