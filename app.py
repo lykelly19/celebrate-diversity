@@ -5,6 +5,7 @@ from twilio.twiml.messaging_response import MessagingResponse
 import datetime
 import json
 import wikipedia
+import random
 
 app = Flask(__name__)
 
@@ -14,8 +15,29 @@ with open('observances_data.json') as json_file:
 months = { 1: 'January', 2: 'February', 3: 'March', 4: 'April', 5: 'May', 6: 'June',
            7: 'July', 8: 'August', 9:' September', 10: 'October', 11: 'November', 12: 'December'}
 
-def getSpotifyTrack():
-    pass
+def getSpotifyTrack(playlist_id):
+    SPOTIFY_ACCESS_TOKEN = os.environ['SPOTIFY_ACCESS_TOKEN']
+    headers = { 'Authorization': 'Bearer {token}'.format(token=SPOTIFY_ACCESS_TOKEN) }
+    BASE_URL = 'https://api.spotify.com/v1/'
+    r = requests.get(BASE_URL + 'playlists/' + playlist_id, headers=headers)
+    r = r.json()
+
+    spotify_song_message = 'Spotify Track: '
+    artist_count = 0
+    random_number = random.randint(0, len(r['tracks']['items']) - 1)
+    song = r['tracks']['items'][random_number]
+    spotify_song_message += song['track']['name'] + ' by '
+
+    for artist in song['track']['artists']:
+        if artist_count == len(song['track']['artists']) - 1 and len(song['track']['artists']) >=2:
+            spotify_song_message += ' and '
+        spotify_song_message += artist['name']
+        if artist_count + 2 < len(song['track']['artists']):
+            spotify_song_message += ', '
+        artist_count += 1
+
+    spotify_song_message += '\nListen Here: ' + song['track']['external_urls']['spotify'] + '\n'
+    return spotify_song_message
 
 @app.route('/', methods=['POST'])
 def receive_sms():
@@ -51,7 +73,11 @@ def receive_sms():
             if numeric_selection <= len(data[month]['observances']):
                 message_string += '**{}**\n'.format(celebration)
                 message_string += wikipedia.summary(celebration) + '\n'
-                message_string += '(Info retrieved from Wikipedia)'
+                message_string += '(Info retrieved from Wikipedia)\n'
+            if len(data[month][celebration]['spotify_song_playlist_id']) > 0:
+                message_string += getSpotifyTrack(data[month][celebration]['spotify_song_playlist_id'])
+            if len(data[month][celebration]['spotify_podcast_playlist_id']) > 0:
+                message_string += getSpotifyTrack(data[month][celebration]['spotify_podcast_playlist_id'])
         except ValueError:
             pass
 
