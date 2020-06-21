@@ -48,7 +48,7 @@ def getSpotifyTrack(playlist_id):
             spotify_song_message += ', '
         artist_count += 1
 
-    spotify_song_message += '\n song['track']['external_urls']['spotify'] \n'
+    spotify_song_message += '\n' + song['track']['external_urls']['spotify'] + '\n'
 
     return spotify_song_message
 
