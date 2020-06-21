@@ -21,7 +21,7 @@ def getSpotifyTrack(playlist_id):
     BASE_URL = 'https://api.spotify.com/v1/'
     r = requests.get(BASE_URL + 'playlists/' + playlist_id, headers=headers)
     r = r.json()
-    return r['tracks']['items'][0]
+    return len(r['tracks']['items'][0])
 
 '''
     spotify_song_message = 'Spotify Track: '
