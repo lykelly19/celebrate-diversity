@@ -16,7 +16,19 @@ months = { 1: 'January', 2: 'February', 3: 'March', 4: 'April', 5: 'May', 6: 'Ju
            7: 'July', 8: 'August', 9:' September', 10: 'October', 11: 'November', 12: 'December'}
 
 def getSpotifyTrack(playlist_id):
-    SPOTIFY_ACCESS_TOKEN = os.environ['SPOTIFY_ACCESS_TOKEN']
+    AUTH_URL = 'https://accounts.spotify.com/api/token'
+    CLIENT_ID = os.environ['CLIENT_ID']
+    CLIENT_SECRET = os.environ['CLIENT_SECRET']
+
+    auth_response = requests.post(AUTH_URL, {
+        'grant_type': 'client_credentials',
+        'client_id': CLIENT_ID,
+        'client_secret': CLIENT_SECRET,
+    })
+
+    auth_response_data = auth_response.json()
+    SPOTIFY_ACCESS_TOKEN = auth_response_data['access_token']
+
     headers = { 'Authorization': 'Bearer {token}'.format(token=SPOTIFY_ACCESS_TOKEN) }
     BASE_URL = 'https://api.spotify.com/v1/'
     r = requests.get(BASE_URL + 'playlists/' + playlist_id, headers=headers)
