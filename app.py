@@ -75,10 +75,8 @@ def receive_sms():
                 message_string += '**{}**\n'.format(celebration)
                 message_string += wikipedia.summary(celebration)[0:350] + '...\n'
                 message_string += '(Info retrieved from Wikipedia)\n\n'
-        #    if len(data[month][celebration]['spotify_song_playlist_id']) > 0:
-        #        message_string += getSpotifyTrack(data[month][celebration]['spotify_song_playlist_id'])
-            if len(data[month][celebration]['spotify_podcast_playlist_id']) > 0:
-                message_string += getSpotifyTrack(data[month][celebration]['spotify_podcast_playlist_id'])
+            if len(data[month][celebration]['spotify_song_playlist_id']) > 0:
+                message_string += getSpotifyTrack(data[month][celebration]['spotify_song_playlist_id'])
         except ValueError:
             pass
 

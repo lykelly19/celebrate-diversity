@@ -6,51 +6,78 @@
     "observances": ["Black History Month"],
     "Black History Month": {
       "spotify_song_playlist_id": "50xzAVN87UB1BULNQlfgxM?si",
-      "spotify_podcast_playlist_id": "3nMf3Dvo1q6CubgkpUCVjl?si"
+      "spotify_podcast_playlist": {
+          "link": "",
+          "name": ","
+        }
     }
   },
   "March": {
     "observances": [ "Irish-American Heritage Month", "Women's History Month"],
     "Irish-American Heritage Month": {
       "spotify_song_playlist_id":" 0JJrElOHV6h2j67ik6Yqx9?si",
-      "spotify_podcast_playlist_id": ""
+      "spotify_podcast_playlist": {
+          "link": "",
+          "name": ","
+        }
     },
     "Women's History Month": {
       "spotify_song_playlist_id": "5dy9Obb0hKoD7VIDh3US4Z?si",
-      "spotify_podcast_playlist_id": ""
+      "spotify_podcast_playlist": {
+          "link": "",
+          "name": ","
+        }
     }
   },
   "April": {
     "observances": ["Arab American Heritage Month"],
     "Arab American Heritage Month": {
       "spotify_song_playlist_id": "4lD58U2pzNoIeXp8aOusi6?si",
-      "spotify_podcast_playlist_id": ""
+      "spotify_podcast_playlist": {
+          "link": "",
+          "name": ","
+        }
     }
   },
   "May": {
     "observances": ["Asian Pacific American Heritage Month", "Haitian Heritage Month", "Jewish American Heritage Month"],
     "Asian Pacific American Heritage Month": {
       "spotify_song_playlist_id": "6rTdBabNIbtWNtcUtzqBqH?si",
-      "spotify_podcast_playlist_id": ""
+      "spotify_podcast_playlist": {
+          "link": "",
+          "name": ","
+        }
     },
     "Haitian Heritage Month": {
       "spotify_song_playlist_id": "2jS6eFsEvr8zrDAr6GXz5o?si",
-      "spotify_podcast_playlist_id": ""
+      "spotify_podcast_playlist": {
+          "link": "",
+          "name": ","
+        }
     },
     "Jewish American Heritage Month": {
       "spotify_song_playlist_id": "12XZJpvtFpJXykR2CzJv3I?si",
-      "spotify_podcast_playlist_id": ""
+      "spotify_podcast_playlist": {
+          "link": "",
+          "name": ","
+        }
     }
   },
   "June": {
     "observances": ["LGBT Pride Month", "African-American Music Appreciation Month"],
     "LGBT Pride Month": {
       "spotify_song_playlist_id": "37i9dQZF1DX59HcpGmPXYR?si",
-      "spotify_podcast_playlist_id": "37i9dQZF1DXd8QW6DBkPG8?si"
+      "spotify_podcast_playlist": {
+          "link": "",
+          "name": ","
+        }
     },
     "African-American Music Appreciation Month": {
       "spotify_song_playlist_id": "0TXHc8cP96QgHo2XEoxbrZ?si",
-      "spotify_podcast_playlist_id": "1kSB2wcWIoWCQ0nNbaKXjv?si"
+      "spotify_podcast_playlist": {
+          "link": "",
+          "name": ","
+        }
     }
   },
   "July": {
@@ -60,47 +87,71 @@
     "observances": ["American Artists Appreciation Month"],
     "American Artists Appreciation Month": {
       "spotify_song_playlist_id": "16ScdsxH3BxGdws3okLPpo?si",
-      "spotify_podcast_playlist_id": "7c3jphWdRfLeWqqeXl0hF3?si"
+      "spotify_podcast_playlist": {
+          "link": "",
+          "name": ","
+        }
     }
   },
   "September": {
     "observances": ["National Hispanic Heritage Month"],
     "National Hispanic Heritage Month": {
       "spotify_song_playlist_id": "4TEb7XlA5PlXVUkO7D9ZB1?si",
-      "spotify_podcast_playlist_id": "2AT50emcEenE9NKx3s8sy8?si"
+      "spotify_podcast_playlist": {
+          "link": "",
+          "name": ","
+        }
     }
   },
   "October": {
     "observances": ["Disability Employment Awareness Month", "Italian-American Heritage and Culture Month", "Filipino American History Month", "LGBT History Month"],
     "Disability Employment Awareness Month": {
       "spotify_song_playlist_id": "",
-      "spotify_podcast_playlist_id": ""
+      "spotify_podcast_playlist": {
+          "link": "",
+          "name": ","
+        }
     },
     "Italian-American Heritage and Culture Month": {
       "spotify_song_playlist_id": "1QM8YYCUzZfqRdys62JdXh?si",
-      "spotify_podcast_playlist_id": ""
+      "spotify_podcast_playlist": {
+          "link": "",
+          "name": ","
+        }
     },
     "Filipino American History Month": {
       "spotify_song_playlist_id": "16yMYsSvrAZ39ByLQy4OM0?si",
-      "spotify_podcast_playlist_id": ""
+      "spotify_podcast_playlist": {
+          "link": "",
+          "name": ","
+        }
     },
     "LGBT History Month": {
       "spotify_song_playlist_id": "37i9dQZF1DX59HcpGmPXYR?si",
-      "spotify_podcast_playlist_id": "37i9dQZF1DXd8QW6DBkPG8?si"
+      "spotify_podcast_playlist": {
+          "link": "",
+          "name": ","
+        }
     }
   },
   "November": {
     "observances": ["Native American Indian/Alaska Native Heritage Month"],
     "Native American Indian/Alaska Native Heritage Month": {
       "spotify_song_playlist_id": "0fRziJ1B4udda5TxTincHy?si",
-      "spotify_podcast_playlist_id": ""
+      "spotify_podcast_playlist": {
+          "link": "",
+          "name": ","
+        }
     }
   },
   "December": {
     "observances": ["Universal Human Rights Month"],
     "Universal Human Rights Month": {
       "spotify_song_playlist_id": "6RbqCwXtxZJhKNIci1DOIc?si",
-      "spotify_podcast_playlist_id": "7d2GzeU9zQPj4NhNiLy9tp?si"
+      "spotify_podcast_playlist": {
+          "link": "",
+          "name": ","
+        }
     }
   }
 }
