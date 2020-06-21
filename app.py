@@ -74,7 +74,7 @@ def receive_sms():
                 if i + 2 < len(data[month]['observances']):
                     month_observances += ', '
 
-            message_string += "This month, {}, is {}!\nTo learn more and get awesome book, music, podcast, and article recommendations to celebrate, text back one of the following number(s): \n".format(month, month_observances)
+            message_string += "\nThis month, {}, is {}!\nTo learn more and get awesome book, music, podcast, and article recommendations to celebrate, text back one of the following number(s): \n".format(month, month_observances)
 
             for i in range(len(data[month]['observances'])):  # print the month's observances
                 message_string += str(i + 1) + ': ' + data[month]['observances'][i] + '\n'
@@ -84,13 +84,13 @@ def receive_sms():
             numeric_selection = int(text)  # try to convert string to int
             celebration = data[month]['observances'][numeric_selection-1]
             if numeric_selection <= len(data[month]['observances']):
-                message_string += '**{}**\n'.format(celebration)
+                message_string += '\n**{}**\n\n'.format(celebration)
                 message_string += wikipedia.summary(celebration)[0:450] + '...\n'
                 message_string += '(Info retrieved from Wikipedia)\n\n'
             if len(data[month][celebration]['spotify_song_playlist_id']) > 0:
                 message_string += getSpotifyTrack(data[month][celebration]['spotify_song_playlist_id'])
             if len(data[month][celebration]['spotify_podcast']['name']) > 0:
-                message_string +=  '\nSpotify Podcast: ' + data[month][celebration]['spotify_podcast']['name']
+                message_string +=  '\nSpotify Podcast: ' + data[month][celebration]['spotify_podcast']['name'] + '\n'
                 message_string += data[month][celebration]['spotify_podcast']['link'] + '\n\n'
         except ValueError:
             pass
