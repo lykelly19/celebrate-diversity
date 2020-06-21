@@ -52,7 +52,7 @@ def getSpotifyTrack(playlist_id):
 
     return spotify_song_message
 
-def getBook(author):
+def getBookInfo(author):
     url = "https://www.googleapis.com/books/v1/volumes?q=inauthor:" + author.lower().replace(' ', '-')
     response = requests.get(url)
     json_data = json.loads(response.text)
@@ -62,7 +62,9 @@ def getBook(author):
         else:
             max = len(json_data['items'])
         random_number = random.randint(0, max - 1)
-        return json_data['items'][random_number]['volumeInfo']['title']  # return book title
+        title = json_data['items'][random_number]['volumeInfo']['title']
+        preview_link = json_data['items'][random_number]['volumeInfo']['previewLink']
+        return '\nBook: {} by {}\n{}\n'.format(title, author, preview_link)
     return ''
 
 @app.route('/', methods=['POST'])
@@ -108,8 +110,7 @@ def receive_sms():
             if len(data[month][celebration]['authors']) > 0:
                 random_number = random.randint(0, len(data[month][celebration]['authors']) - 1)
                 author = data[month][celebration]['authors'][random_number]
-                title = getBook(author)
-                message_string += '\nBook: {} by {}\n'.format(title, author)
+                message_string += getBookInfo(author)
         except ValueError:
             pass
 
