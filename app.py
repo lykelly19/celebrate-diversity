@@ -14,6 +14,9 @@ with open('observances_data.json') as json_file:
 months = { 1: 'January', 2: 'February', 3: 'March', 4: 'April', 5: 'May', 6: 'June',
            7: 'July', 8: 'August', 9:' September', 10: 'October', 11: 'November', 12: 'December'}
 
+def getSpotifyTrack():
+    pass
+
 @app.route('/', methods=['POST'])
 def receive_sms():
     text = request.values.get('Body', None)
@@ -25,7 +28,7 @@ def receive_sms():
 
     if text.upper() == 'LEARN':
 
-        if(len(data[month]['observances']) == 0):  # if no observances found for the month
+        if len(data[month]['observances']) == 0:  # if no observances found for the month
             message_string += 'Learn more about...'
         else:
             month_observances = ''
@@ -43,10 +46,11 @@ def receive_sms():
 
     else:
         try:
-            numeric_selection = int(text)
+            numeric_selection = int(text)  # try to convert string to int
+            celebration = data[month]['observances'][numeric_selection-1]
             if numeric_selection <= len(data[month]['observances']):
-                message_string += '**{}**\n'.format(data[month]['observances'][numeric_selection-1])
-                message_string += wikipedia.summary(data[month]['observances'][numeric_selection-1]) + '\n'
+                message_string += '**{}**\n'.format(celebration)
+                message_string += wikipedia.summary(celebration) + '\n'
                 message_string += '(Info retrieved from Wikipedia)'
         except ValueError:
             pass
