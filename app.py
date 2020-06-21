@@ -89,7 +89,7 @@ def receive_sms():
                 if i + 2 < len(data[month]['observances']):
                     month_observances += ', '
 
-            message_string += "\nThis month, {}, is {}!\nTo learn more and get awesome book, music, podcast, and article recommendations to celebrate, text back one of the following number(s): \n".format(month, month_observances)
+            message_string += "\nThis month, {}, is {}!\nTo learn more and get awesome book, music, and podcast recommendations to celebrate, text back one of the following number(s): \n".format(month, month_observances)
 
             for i in range(len(data[month]['observances'])):  # print the month's observances
                 message_string += str(i + 1) + ': ' + data[month]['observances'][i] + '\n'

@@ -11,7 +11,7 @@
           "name": "Black History Month Podcast Playlist from NPR"
         }
     },
-    "authors": []
+    "authors": ["Ashley D. Farmer", "Glory Edim", "Angie Thomas"]
   },
   "March": {
     "observances": [ "Irish-American Heritage Month", "Women's History Month"],
@@ -21,7 +21,7 @@
           "link": "https://open.spotify.com/episode/7yZ6JHbLu95KHmT73TdrdM?si=VO9diyr6QmiyQy3C7G4XHw",
           "name": "Beyond the Beer: Rediscovering Irish-American Culture and Heritage"
         },
-        "authors": []
+        "authors": ["Jennifer Nugent Duffy", "Linda Dowling Almeida"]
     },
     "Women's History Month": {
       "spotify_song_playlist_id": "5dy9Obb0hKoD7VIDh3US4Z?si",
@@ -29,7 +29,7 @@
           "link": "https://open.spotify.com/show/5bwh8e6OdHFs3GSbGTzb7z?si=qX6a2vkgSuC-Zfbg4dFDLw",
           "name": "The Women’s Print History Project Monthly Mercury"
         },
-        "authors": []
+        "authors": ["Michelle Obama", "Virginia Woolf", "Zainab Salbi"]
     }
   },
   "April": {
@@ -40,7 +40,7 @@
           "link": "",
           "name": ","
         },
-        "authors": []
+        "authors": ["Randa Jarrar", "Moustafa Bayoumi", "Naomi Shihab Nye"]
     }
   },
   "May": {
@@ -51,7 +51,7 @@
           "link": "https://open.spotify.com/show/7FOAOvL4rqJPMQx1m8v0YG?si=RbLjvVYJRLabaMSfEUn50g",
           "name": "For Micronesians by Micronesians"
         },
-        "authors": []
+        "authors": ["Celeste Ng", "Lisa See", "Amy Tan"]
     },
     "Haitian Heritage Month": {
       "spotify_song_playlist_id": "2jS6eFsEvr8zrDAr6GXz5o?si",
@@ -59,7 +59,7 @@
           "link": "Growing Up Krenglish",
           "name": "https://open.spotify.com/show/1vbtaJybAGxVjdVdWTBDa4?si=cmeetMAlSGSMxPVddtRn8g"
         },
-        "authors": []
+        "authors": ["Flore Zephir", "Bertony Paul", "Jessica Fievre"]
     },
     "Jewish American Heritage Month": {
       "spotify_song_playlist_id": "12XZJpvtFpJXykR2CzJv3I?si",
@@ -67,7 +67,7 @@
           "link": "https://open.spotify.com/episode/7zzQET4SUki3Fxzd8OLuev?si=DmigwzpcRISJpPcbd_RqZg",
           "name": "The Book of Life Plays Ball"
         },
-        "authors": []
+        "authors": ["Pamela Nadell", "Michael Chabon", "Beth S. Wenger"]
     }
   },
   "June": {
@@ -100,7 +100,7 @@
           "link": "https://open.spotify.com/show/7c3jphWdRfLeWqqeXl0hF3?si=2eo8_6U4SliEw-QXokmxGg",
           "name": "American Masters Podcast"
         },
-        "authors": []
+        "authors": ["Leslie Umberger", "Javaka Steptoe",  "Frances K. Pohl"]
     }
   },
   "September": {
@@ -111,7 +111,7 @@
           "link": "https://open.spotify.com/episode/2AT50emcEenE9NKx3s8sy8?si=PGh47e5XQ467ENhWYm1nPA",
           "name": "Hispanic Heritage Week"
         },
-        "authors": []
+        "authors": ["Erika Sanchez", "Pam Munoz Ryan", "Sandra Cisneros"]
     }
   },
   "October": {
@@ -122,7 +122,7 @@
           "link": "https://open.spotify.com/show/4h2dlAmdC8VieSvpjhyUTq?si=Nl5YIr-eTPKllmNTMQwYaw",
           "name": "Disability Visibility"
         },
-        "authors": []
+        "authors": ["Gail Honeyman", "Maria Mutch", "Shane Burcaw"]
     },
     "Italian-American Heritage and Culture Month": {
       "spotify_song_playlist_id": "1QM8YYCUzZfqRdys62JdXh?si",
@@ -130,7 +130,7 @@
           "link": "https://open.spotify.com/show/23DypkCV0ev62zEJ6Lv1d1?si=oVhPHj3QRXmC1XnUnRpnPA",
           "name": "The Italian American Podcast"
         },
-        "authors": []
+        "authors": ["Salvatore LaGumina", "John DiBiase", "Martino Marazzi"]
     },
     "Filipino American History Month": {
       "spotify_song_playlist_id": "16yMYsSvrAZ39ByLQy4OM0?si",
@@ -138,7 +138,7 @@
           "link": "https://open.spotify.com/show/7jTAf1Cv2OpqdGoBhIhaq2?si=GOeemlSGQkCxaBZvi_x1bw",
           "name": "This Filipino American Life"
         },
-        "authors": []
+        "authors": ["Yen Espiritu", "Anthony Christian Ocampo", "Carlos Bulosan"]
     },
     "LGBT History Month": {
       "spotify_song_playlist_id": "37i9dQZF1DX59HcpGmPXYR?si",
@@ -146,7 +146,7 @@
           "link": "https://open.spotify.com/playlist/37i9dQZF1DXd8QW6DBkPG8?si=hm6h4E_uTY68sv5vIGXF3g",
           "name": "LGBT+ Voices"
         },
-        "authors": []
+        "authors": ["Matthew Riemer", "Meredith Talusan", "Jacob Tobia"]
     }
   },
   "November": {
@@ -157,7 +157,7 @@
           "link": "https://open.spotify.com/show/3Qdmo73PwMUCktIW5URwXc?si=TnLFSHXKQ427WV5Uu1f2qg",
           "name": "National Native Network Podcast"
         },
-        "authors": []
+        "authors": ["Roxanne Dunbar-Ortiz", "Tommy Orange", "David Treuer"]
     }
   },
   "December": {
@@ -168,7 +168,7 @@
           "link": "https://open.spotify.com/show/7d2GzeU9zQPj4NhNiLy9tp?si=txPNpd0SRPOR3lbv8bdZuw",
           "name": "On Human Rights"
         },
-        "authors": []
+        "authors": ["Samuel Moyn", "Mary Ann Glendon", "Lynn Hunt"]
     }
   }
 }
