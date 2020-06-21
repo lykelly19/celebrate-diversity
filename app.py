@@ -21,7 +21,9 @@ def getSpotifyTrack(playlist_id):
     BASE_URL = 'https://api.spotify.com/v1/'
     r = requests.get(BASE_URL + 'playlists/' + playlist_id, headers=headers)
     r = r.json()
+    return r['tracks']['items'][0]
 
+'''
     spotify_song_message = 'Spotify Track: '
     artist_count = 0
     random_number = random.randint(0, len(r['tracks']['items']) - 1)
@@ -37,6 +39,7 @@ def getSpotifyTrack(playlist_id):
         artist_count += 1
 
     spotify_song_message += '\nListen Here: ' + song['track']['external_urls']['spotify'] + '\n'
+'''
     return spotify_song_message
 
 @app.route('/', methods=['POST'])
