@@ -40,7 +40,7 @@ def getSpotifyTrack(playlist_id):
 
     spotify_song_message += '\nListen Here: ' + song['track']['external_urls']['spotify'] + '\n'
 '''
-    return spotify_song_message
+    #return spotify_song_message
 
 @app.route('/', methods=['POST'])
 def receive_sms():
