@@ -53,19 +53,17 @@ def getSpotifyTrack(playlist_id):
     return spotify_song_message
 
 def getBook(author):
-    '''
     url = "https://www.googleapis.com/books/v1/volumes?q=inauthor:" + author.lower().replace(' ', '-')
     response = requests.get(url)
     json_data = json.loads(response.text)
-    if len(json_data['item']) > 0:
+    if len(json_data['items']) > 0:
         if len(json_data['items']) > 3:  # look at most the top 3 results (higher relevance)
             max = 3
         else:
             max = len(json_data['items'])
         random_number = random.randint(0, max - 1)
         return json_data['items'][random_number]['volumeInfo']['title']  # return book title
-    '''
-    return 'book'
+    return ''
 
 @app.route('/', methods=['POST'])
 def receive_sms():
@@ -106,7 +104,7 @@ def receive_sms():
                 message_string += getSpotifyTrack(data[month][celebration]['spotify_song_playlist_id'])
             if len(data[month][celebration]['spotify_podcast']['name']) > 0:
                 message_string += '\nSpotify Podcast: ' + data[month][celebration]['spotify_podcast']['name'] + '\n'
-                message_string += data[month][celebration]['spotify_podcast']['link'] + '\n\n'
+                message_string += data[month][celebration]['spotify_podcast']['link'] + '\n'
             if len(data[month][celebration]['authors']) > 0:
                 random_number = random.randint(0, len(data[month][celebration]['authors']) - 1)
                 author = data[month][celebration]['authors'][random_number]
